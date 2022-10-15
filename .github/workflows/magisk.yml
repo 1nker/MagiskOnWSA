@@ -102,7 +102,7 @@ jobs:
           sudo apt-get update && sudo apt-get install setools lzip wine winetricks patchelf
           wget -qO- "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/archive/$GITHUB_REF.tar.gz" | sudo tar --wildcards -zxvf- -C ~ --strip-component=2 '*/wine/*' '*/linker/*'
           winetricks msxml6
-          echo "163.172.251.201 store.rg-adguard.net" | sudo tee -a /etc/hosts
+          echo "188.114.96.3 store.rg-adguard.net" | sudo tee -a /etc/hosts
       - name: Download WSA
         shell: python
         run: |
@@ -173,7 +173,8 @@ jobs:
                                   l.extract(g, 'pri')
                                   print(f"extract resource pack {g.filename}")
                               elif g.filename == 'AppxManifest.xml':
-                                  g.filename = f'{name}.xml'
+                                  g.filename = f'{name}.xml
+                                  '
                                   l.extract(g, 'xml')
 
           with zipfile.ZipFile(zip_name) as zip:
