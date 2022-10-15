@@ -173,8 +173,7 @@ jobs:
                                   l.extract(g, 'pri')
                                   print(f"extract resource pack {g.filename}")
                               elif g.filename == 'AppxManifest.xml':
-                                  g.filename = f'{name}.xml
-                                  '
+                                  g.filename = f'{name}.xml'
                                   l.extract(g, 'xml')
 
           with zipfile.ZipFile(zip_name) as zip:
